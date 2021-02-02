@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./Lifecycle Methods/App";
+import App from "./UseEffect/App";
 
 ReactDOM.render(
   <React.StrictMode>
