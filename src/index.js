@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./UseEffect/App";
+import App from "./PracticeApp/twitterCharacter";
 
 ReactDOM.render(
   <React.StrictMode>
