@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 
 const App = () => {
-  const [password, setPassword] = useState([]);
-  const [confPassword, setConfPassword] = useState([]);
+  const [password, setPassword] = useState("");
+  const [confPassword, setConfPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [buttonText, setButtonText] = useState("Show Password");
 
-  let FieldType = "password";
   const checkPassword = () => {
-    console.log(password);
+    setShowPassword(showPassword ? false : true);
+    setButtonText(buttonText ? false : true);
   };
 
   return (
@@ -16,22 +18,30 @@ const App = () => {
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
           value={password}
-          type="text"
+          type={showPassword ? "text" : "password"}
         ></input>
         <input
           placeholder="Confirm Password"
           onChange={(e) => setConfPassword(e.target.value)}
           value={confPassword}
-          type="text"
+          type={showPassword ? "text" : "password"}
         ></input>
         <br />
         <br />
 
         <button type="button" onClick={checkPassword}>
-          See Password
+          {buttonText ? "Show Password" : "Hide Password"}
         </button>
-
-        <button disabled={confPassword !== password ? true : false}>
+        <br />
+        <br />
+        <button
+          disabled={
+            (confPassword === "" && password === "") ||
+            confPassword !== password
+              ? true
+              : false
+          }
+        >
           Submit Password
         </button>
       </form>
