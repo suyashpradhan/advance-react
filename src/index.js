@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Todo from "./Todo";
+import Toast from "./Toast";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Todo />
+    <Toast />
   </React.StrictMode>,
   document.getElementById("root")
 );

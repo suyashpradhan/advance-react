@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
 
-function DarkMode() {
+const DarkMode = () => {
   const [toggleMode, setToggleMode] = useState("Toggle Dark Mode");
   const [bgColor, setBgColor] = useState("#FFF");
 
@@ -22,6 +22,6 @@ function DarkMode() {
       </p>
     </div>
   );
-}
+};
 
 export default DarkMode;
