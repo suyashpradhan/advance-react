@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Toast from "./Toast";
+import ParentState from "./ParentState";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Toast />
+    <ParentState />
   </React.StrictMode>,
   document.getElementById("root")
 );
